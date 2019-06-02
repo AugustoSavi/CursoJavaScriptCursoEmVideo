@@ -1,0 +1,31 @@
+<!-- Ex009 feito em HTML -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Vereficadore de Nacionalidade</h1>
+    Informe a seu pais <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Vereficar" onclick=" Vereficar()">
+    <div id="res">
+        
+    </div>
+
+    <script>
+
+    function Vereficar(){
+        var txtpais = document.getElementById('txtpais')
+        var res = document.getElementById('res')
+        if (txtpais.value == "brasil") {
+            res.innerHTML ="Você é brasileiro"
+        }else{
+            res.innerHTML="você é estrangeiro"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- introdução ao if -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detram</title>
+</head>
+<body>
+    <h1>Sistema de Multa</h1>
+    Velocidade do Carro<input type="number" name="txtvel" id="txtvel">Km/h
+    <input type="button" value="Vereficar" onclick="Calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        
+    function Calcular(){
+        var txtv = window.document.getElementById('txtvel')
+        var res = document.getElementById('res')
+        var vel = Number(txtv.value)
+        res.innerHTML = '<p>Sua Velocidade Atual é de '+vel+'km/h</p>'
+        if (vel>60) {
+            res.innerHTML += "<p>Voce foi multado</p>"
+        }
+        res.innerHTML += '<p> diriga sempre com cinto de segurança</p>'
+    }
+    </script>
+</body>
+</html>
